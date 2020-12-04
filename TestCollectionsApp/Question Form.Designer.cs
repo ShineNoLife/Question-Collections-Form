@@ -33,11 +33,15 @@
             // 
             // questionInfoTextBox
             // 
+            this.questionInfoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.questionInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionInfoTextBox.Location = new System.Drawing.Point(13, 13);
             this.questionInfoTextBox.Multiline = true;
             this.questionInfoTextBox.Name = "questionInfoTextBox";
             this.questionInfoTextBox.ReadOnly = true;
+            this.questionInfoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.questionInfoTextBox.Size = new System.Drawing.Size(652, 600);
             this.questionInfoTextBox.TabIndex = 0;
             // 
@@ -48,7 +52,7 @@
             this.ClientSize = new System.Drawing.Size(677, 625);
             this.Controls.Add(this.questionInfoTextBox);
             this.Name = "Question_Form";
-            this.Text = "Question_Form";
+            this.Text = "Question Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -44,22 +44,29 @@ namespace TestCollectionsApp
 
         private void openSelectedQuestionButton_Click(object sender, EventArgs e)
         {
-            string idString = QuestionIDList[questionListBox.SelectedIndex];
-            string questionDirectory = "";
-            databaseConnection.Open();
-            databaseCommand.CommandText = $"SELECT Directory FROM questiontable WHERE ID = '{ idString }'";
-            databaseReader = databaseCommand.ExecuteReader();
-            if (databaseReader.HasRows)
+            try
             {
-                while(databaseReader.Read())
-                    questionDirectory = databaseReader.GetString(0);
-            }            
+                string idString = QuestionIDList[questionListBox.SelectedIndex];
+                string questionDirectory = "";
+                databaseConnection.Open();
+                databaseCommand.CommandText = $"SELECT Directory FROM questiontable WHERE ID = '{ idString }'";
+                databaseReader = databaseCommand.ExecuteReader();
+                if (databaseReader.HasRows)
+                {
+                    while (databaseReader.Read())
+                        questionDirectory = databaseReader.GetString(0);
+                }
 
-            QuestionData = File.ReadAllLines(questionDirectory);
-            Form QuestionForm = new Question_Form(QuestionData);
-            QuestionForm.Show();
+                QuestionData = File.ReadAllLines(questionDirectory);
+                Form QuestionForm = new Question_Form(QuestionData);
+                QuestionForm.Show();
 
-            databaseConnection.Close();
+                databaseConnection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No Question Currently Selected");
+            }
         }
 
         private void SetupListBox()
@@ -105,5 +112,6 @@ namespace TestCollectionsApp
             }
             return false;
         }
+
     }
 }

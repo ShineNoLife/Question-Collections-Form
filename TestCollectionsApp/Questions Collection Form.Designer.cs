@@ -58,22 +58,24 @@
             // 
             // questionListBox
             // 
+            this.questionListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.questionListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionListBox.FormattingEnabled = true;
             this.questionListBox.ItemHeight = 16;
             this.questionListBox.Location = new System.Drawing.Point(13, 51);
-            this.questionListBox.MultiColumn = true;
             this.questionListBox.Name = "questionListBox";
             this.questionListBox.Size = new System.Drawing.Size(692, 372);
             this.questionListBox.TabIndex = 1;
             // 
             // openSelectedQuestionButton
             // 
-            this.openSelectedQuestionButton.Location = new System.Drawing.Point(711, 51);
+            this.openSelectedQuestionButton.Location = new System.Drawing.Point(487, 12);
             this.openSelectedQuestionButton.Name = "openSelectedQuestionButton";
-            this.openSelectedQuestionButton.Size = new System.Drawing.Size(77, 67);
+            this.openSelectedQuestionButton.Size = new System.Drawing.Size(130, 32);
             this.openSelectedQuestionButton.TabIndex = 3;
-            this.openSelectedQuestionButton.Text = "Open Selected Question";
+            this.openSelectedQuestionButton.Text = "Open Selected";
             this.openSelectedQuestionButton.UseVisualStyleBackColor = true;
             this.openSelectedQuestionButton.Click += new System.EventHandler(this.openSelectedQuestionButton_Click);
             // 
